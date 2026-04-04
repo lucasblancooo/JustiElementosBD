@@ -1,0 +1,14 @@
+body{margin: auto;
+    align-items: center;
+    background-color: lightskyblue;
+    }
+H1{
+        margin: auto;
+        text-align: center;
+        color: red;
+    }
+.titulo {
+    color: red;
+    margin:10px;
+    font-size: 22px;
+}
