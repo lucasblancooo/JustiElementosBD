@@ -1,14 +1,34 @@
-body{margin: auto;
+body{
+    margin: auto;
     align-items: center;
-    background-color: lightskyblue;
-    }
-H1{
-        margin: auto;
-        text-align: center;
-        color: red;
-    }
+    background-color: rgb(236, 197, 198);
+}
+h1{
+    margin: auto;
+    text-align: center;
+    color: rgb(131, 125, 104);
+    font-size: 300%;
+}
 .titulo {
-    color: red;
+    color: rgb(131, 125, 104);
     margin:10px;
     font-size: 22px;
+}
+table{
+    border: 0px; margin: auto;
+    vertical-align: middle
+}
+.tabla_prod{
+    border: 1px; margin: auto;
+    vertical-align: middle
+}
+td{
+    font-size:20px;
+    width: 150px;
+    text-align: center;}
+h2{
+    margin: auto;
+    text-align: center;
+    color: rgb(175, 154, 77);
+    font-size: 300%;
 }
