@@ -40,7 +40,7 @@ CREATE TABLE `clientes` (
 --
 
 INSERT INTO `clientes` (`ID_cliente`, `Nombre`, `Apellido`, `telefono`, `ID_destino`) VALUES
-(2, 'Celeste', 'Nuñez', '01124072499', 1);
+(1, 'Celeste', 'Nuñez', '01124072499', 1);
 
 -- --------------------------------------------------------
 
@@ -103,7 +103,7 @@ CREATE TABLE `orden` (
 --
 
 INSERT INTO `orden` (`ID_orden`, `fecha_inicio`, `fecha_term`, `cantidad`, `monto_total`, `ID_cliente`, `ID_prod`, `ID_metodo`) VALUES
-(1, '2026-04-19', '2026-04-26', 3, 1053.00, 2, 2, 1);
+(1, '2026-04-19', '2026-04-26', 3, 1053.00, 1, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -122,7 +122,7 @@ CREATE TABLE `producto` (
 --
 
 INSERT INTO `producto` (`ID_prod`, `nom_prod`, `precio`) VALUES
-(2, 'Serrucho', 450.00);
+(1, 'Serrucho', 450.00);
 
 --
 -- Índices para tablas volcadas
@@ -170,7 +170,7 @@ ALTER TABLE `producto`
 -- AUTO_INCREMENT de la tabla `clientes`
 --
 ALTER TABLE `clientes`
-  MODIFY `ID_cliente` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `ID_cliente` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT de la tabla `destino`
@@ -194,7 +194,7 @@ ALTER TABLE `orden`
 -- AUTO_INCREMENT de la tabla `producto`
 --
 ALTER TABLE `producto`
-  MODIFY `ID_prod` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `ID_prod` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Restricciones para tablas volcadas
