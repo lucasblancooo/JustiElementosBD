@@ -1,9 +1,9 @@
 <link rel="stylesheet" href="estilo.css">
 <br><br><br><br>
 
-<?php include("bd.php")
-?>
 <?php include("menu.php")
+?>
+<?php include("bd.php")
 ?>
 
 <form method="POST">

@@ -1,15 +1,16 @@
-<style> 
-    table{border: 0px; margin: auto;
-    vertical-align: middle
-}
-    td{
-    font-size:20px;
-    width: 150px;
-    text-align: center;}
-</style>
+
+<link rel="stylesheet" href="estilo.css">
 
 <div>
-
+<br>
+<h2 style="
+    margin: auto;
+    text-align: center;
+    color: rgb(175, 154, 77);
+    font-size: 300%;
+    "> Menú</h2>
+<br><br>
+</div>
 <table>
     <tr>
         <td> <a href="index.php"> Home</a> </td>
@@ -19,6 +20,6 @@
          <td> <a href="orden.php"> Pedir</a> </td>
     </tr>
 </table>
-
-</div> 
-<br><br><br><br>
+<br>
+<hr>
+<br><br>

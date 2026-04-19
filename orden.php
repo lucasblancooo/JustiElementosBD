@@ -1,9 +1,9 @@
 <link rel="stylesheet" href="estilo.css">
 <br><br><br><br>
 
-<?php include("bd.php")
-?>
 <?php include("menu.php")
+?>
+<?php include("bd.php")
 ?>
 
 
@@ -43,14 +43,13 @@
         <?php
         $met_pago = $conexion->query("SELECT * FROM metodo_pago");
         while ($mp = $met_pago->fetch_assoc()) {
-            echo "<option value='{$mp['ID_metodo']}'>{$mp['nom_metodo']}</option>";
+            echo "<option value='{$mp['ID_metodo']}'>{$mp['nom_metodo']} %{$mp['descuento']} </option>";
         }
         ?>
 
     </select>
 
      <br><br>
-    
 
      <button type="submit"> Enviar </button>
 
@@ -64,11 +63,17 @@
         $met_pago=$_POST['met_pago'];
 
         $sql_precio = "SELECT precio FROM producto WHERE ID_prod = $producto";
-        $resultado = $conexion->query($sql_precio);
+        $sql_descuento =  "SELECT descuento FROM metodo_pago WHERE ID_metodo = $met_pago";
 
+        $resultado = $conexion->query($sql_precio);
         $fila = $resultado->fetch_assoc();
         $precio = $fila['precio'];
-        $monto_total = $precio * $cantidad;
+
+        $resultado2 = $conexion->query($sql_descuento);
+        $fila = $resultado2->fetch_assoc();
+        $descuento = $fila['descuento'];
+ 
+        $monto_total = ($precio * $cantidad) - ($precio * $cantidad * $descuento/100);
 
         $sql="INSERT INTO orden(fecha_inicio, fecha_term, cantidad, monto_total, ID_cliente, ID_prod, ID_metodo)
                 VALUES (CURDATE(), DATE_ADD(CURDATE(), INTERVAL 1 WEEK), '$cantidad', '$monto_total', '$cliente', '$producto', '$met_pago')";
