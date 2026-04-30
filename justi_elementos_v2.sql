@@ -283,6 +283,11 @@ ALTER TABLE `producto`
   MODIFY `ID_prod` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 
 --
+ALTER TABLE `detalle_orden` CHANGE `cantidad` `cantidad` INT(11) UNSIGNED NOT NULL;
+ALTER TABLE `metodo_de_pago` CHANGE `descuento` `descuento` DECIMAL(5,2) UNSIGNED NOT NULL DEFAULT '0.00';
+--
+
+--
 -- Restricciones para tablas volcadas
 --
 
