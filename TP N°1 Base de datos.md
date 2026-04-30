@@ -16,17 +16,11 @@
 
 1\) Desarrollar en grupo una lógica de negocio que relate las políticas de la empresa. Se deberá constituir ,luego del mismo, el diagrama MER (Modelo Entidad Relación) y elaborar el esquema normalizado de tablas.
 
- Somos los administradores de la ferretería “Elementos Justi”. La misma tendrá un sistema de venta Online por medio de una página web, en la cuál el cliente nos dará su nombre y apellido y el sistema le asignará un identificador, para luego elegir el artículo y la cantidad deseado y por último el lugar de entrega, código postal y método de pago. 
+ Somos los administradores de la ferretería “Elementos Justi”. La misma tendrá un sistema de venta Online por medio de una página web, en la cuál el cliente nos dará sus datos personales y el sistema le asignará un identificador, para luego elegir los artículos y la cantidad deseada y por último el método de pago. 
 
- El sistema realizará un cálculo dependiendo del monto a pagar, y dependiendo del mismo se aplicarán ciertos descuentos al precio final, los cuales son:
-
-\-$150.000: 10% de descuento
-
-\-$250.000: 20% de descuento
-
-\-$500.000 o más: 35% de descuento
-
-  Otro detalle a aclarar, es que si se paga con tarjeta con la opción de cuotas con interés, se deberá hacer un recargo del 20%, y si se abona en transferencia, habrá un 10% de descuento.
+ El sistema realizará un cálculo dependiendo del método de pago seleccionado, y dependiendo del mismo se aplicarán ciertos descuentos al precio final.
+ 
+Nuestro sistema aparte, provee funcionalidades para facilitar su uso al administrador, como la posibilidad de eliminar, editar y buscar productos. Aparte, abajo de la parte de registros de cada tabla correspondiente, habrá un listado que ayudará al administrador a tener un mayor entendimiento de los datos que están en la Base de Datos.
 
 MER:
 
